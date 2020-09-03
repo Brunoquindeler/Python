@@ -1,5 +1,6 @@
 import random
 
+# Mudar Range conforme desejado, quanto maior o Range, maior a dificuldade.
 RANGE = range(1, 4)
 
 global numPrimary
@@ -27,12 +28,12 @@ def getNumberSecondary():
     global numPrimary
 
     try:
-        numSecondary = int(input('\nNúmero secondário: '))
+        numSecondary = int(input('Número secundário: '))
     except:
         print('')
 
     if numSecondary not in RANGE or numSecondary == numPrimary:
-        print('\nNúmero inválido ou igual.')
+        print('\nNúmero inválido ou igual.\n')
         getNumberSecondary()
     else:
         print('')
@@ -44,20 +45,23 @@ def game():
     global numX
 
     if numPrimary == numX:
+        print('============ RESULTADO ============')
         print('Número primário: ', numPrimary)
-        print('Número secondário: ', numSecondary)
-        print('Número gerado: ', numX)
-        print('Ganhou!!!')
+        print('Número secundário: ', numSecondary)
+        print('\nNúmero gerado: ', numX)
+        print('\nGanhou!!!')
     elif numSecondary == numX:
+        print('============ RESULTADO ============')
         print('Número primário: ', numPrimary)
-        print('Número secondário: ', numSecondary)
-        print('Número gerado: ', numX)
-        print('Não perdeu e nem ganhou!')
+        print('Número secundário: ', numSecondary)
+        print('\nNúmero gerado: ', numX)
+        print('\nNão perdeu e nem ganhou!')
     else:
+        print('============ RESULTADO ============')
         print('Número primário: ', numPrimary)
-        print('Número secondário: ', numSecondary)
-        print('Número gerado: ', numX)
-        print('Perdeu...')
+        print('Número secundário: ', numSecondary)
+        print('\nNúmero gerado: ', numX)
+        print('\nPerdeu...')
 
 getNumberPrimary()
 
